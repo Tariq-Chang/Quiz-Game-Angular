@@ -1,0 +1,11 @@
+<div class="container">
+    <h4>Q{{currentIndex+1}}</h4>
+    <div class="question-container">
+        <app-question (optionEvent)="handleSelectedOption($event)" [question]="currentQuestion"
+            [answer]="currentQuestion.answer"></app-question>
+    </div>
+    <button (click)="handleNextButton()" [disabled]="(currentIndex + 1 > data.length) && selectedOption">Next</button>
+</div>
+<!-- <div class="result">
+    <strong>{{currentIndex+1 >= data.length ? "You scored: " + correct*10 : currentIndex}}</strong>
+  </div> -->

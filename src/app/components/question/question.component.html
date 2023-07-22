@@ -1,0 +1,22 @@
+<div class="container-main">
+    <h3>{{question.question}}</h3>
+    <div class="container-options">
+        <input type="radio" id="option1" value={{question.option1}} (change)="handleOptionChange($event)" name="option"
+            [checked]="question.option1 === selectedOption">
+        <label for="option1">{{question.option1}}</label>
+        <br>
+        <input type="radio" id="option2" value={{question.option2}} name="option" (change)="handleOptionChange($event)"
+            [checked]="question.option2 === selectedOption">
+        <label for="option2">{{question.option2}}</label>
+        <br>
+
+        <input type="radio" id="option3" value={{question.option3}} name="option" (change)="handleOptionChange($event)"
+            [checked]="question.option3 === selectedOption">
+        <label for="option3">{{question.option3}}</label>
+        <br>
+
+        <input type="radio" id="option4" value={{question.option4}} name="option" (change)="handleOptionChange($event)"
+            [checked]="question.option4 === selectedOption">
+        <label for="option4">{{question.option4}}</label>
+    </div>
+</div>
